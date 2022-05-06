@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+/* Reset geral */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+/* VARIAVEIS */
+:root{
+    --red: #e50914;
+    --black: #141414;
+}
+body{
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+/*MENU */
+header{
+    position: relative;
+    z-index: 3;
+}
+.nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    transition: 0.2s ease-in-out;
+    box-shadow: inset 57px 79px 28px -34px rgb(0 0 0 / 69%);
+}
+.scroll{
+    background: var(--black);
+}
+.nav img{
+    width: 136px;
+}
+.menu{
+    display: flex;
+}
+.nav a{
+    color: #fff;
+    margin-right: 10px;
+}
+ .menu a:nth-child(4){
+    margin-right: 0;
+}
+.menu-p{
+    visibility:hidden;
+}
+/* CONTEUDO PRINCIPAL*/
+/* BANNER */
+.banner{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) 100%),url("/media/background.jpg") no-repeat center center/cover;
+    position: relative;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.banner::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 80vh;
+    height: 20vh;
+    z-index: 1;
+    width: 100%;
+    background-image: linear-gradient(to bottom, transparent -9%, var(--black) 82%);
+}
+/* CONTAINER BANNER */
+.banner .container {
+    margin-left: 5%;
+    width: 60%;
+}
+/* TEXTOS BANNER */
+.banner .content-text h1{
+    font-size: 5rem;
+}
+/* BOTOES BANNER */
+.banner .content-btn{
+    margin-top: 90px;
+    display: flex;
+}
+.btn{
+    padding: 0.8rem;
+    border: none;
+    user-select: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: 0.3s ease;
+}
+.content-btn .btn-watch{
+    width: 20%;
+    background: #fff;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-right: 20px;
+}
+.btn-watch:hover{
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) 100%), #fff;
+    cursor: pointer;
+    transform: scale(1.04);
+}
+.content-btn .btn-info{
+    background: rgba(211, 211, 211, 0.2);
+    color: #fff;
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+}
+.btn-info:hover{
+    background: rgba(211, 211, 211, 0.1);
+    cursor: pointer;
+    transform: scale(1.04);
+}
+/* CARROUSEL */
+.carousel-films{
+    background: var(--black);
+    z-index: 0;
+}
+.carousel-films .container{
+    display: flex;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.carousel-films img{
+    height: 10% !important;
+    width: 70% !important;
+}
+section h2{
+    margin-left: 5%;
+    margin-bottom: 3%;
+}
+.item{
+    margin-right: 0 !important;
+}
